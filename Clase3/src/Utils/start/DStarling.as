@@ -18,10 +18,7 @@ package Utils.start
 		private static var onComplete:Function;
 		private static var baseClass:Class;
 		
-		public static function init(rootClass:Class, 
-									stage:Stage, 
-									assets:Vector.<String>, 
-									_onComplete:Function):void
+		public static function init(rootClass:Class, stage:Stage, assets:Vector.<String>, _onComplete:Function):void
 		{
 			starling = new Starling(rootClass, stage);
 			onComplete = _onComplete;
@@ -49,16 +46,16 @@ package Utils.start
 				//trace("Assets completos");
 				var game:Object = starling.root as baseClass;
 				game.start();
-				//onComplete();
+					//onComplete();
 			}
 		}
 		
-		static public function get assetsManager():AssetManager 
+		static public function get assetsManager():AssetManager
 		{
 			return _assetsManager;
 		}
 		
-		static public function set assetsManager(value:AssetManager):void 
+		static public function set assetsManager(value:AssetManager):void
 		{
 			_assetsManager = value;
 		}
